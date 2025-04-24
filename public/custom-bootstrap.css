@@ -1,0 +1,212 @@
+/* Custom Bootstrap overrides for Neighborhood Explorer look */
+
+body, .bg-white {
+  background: #181512 !important;
+  color: #fff !important;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+.navbar, .navbar-dark, .navbar.bg-dark, .navbar.bg-black {
+  background: #23201c !important;
+  color: #fff !important;
+  border: none;
+  box-shadow: none;
+}
+
+.navbar .nav-link, .navbar-brand, .navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.navbar .nav-link.active, .navbar .nav-link:focus, .navbar .nav-link:hover {
+  color: #00e1ff !important;
+}
+
+.btn-primary, .btn-primary:focus, .btn-primary:active {
+  background: #00e1ff !important;
+  border: none !important;
+  color: #fff !important;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 0.4rem 1.4rem;
+}
+
+.btn-success, .btn-success:focus, .btn-success:active {
+  background: #27ff9a !important;
+  border: none !important;
+  color: #181512 !important;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 0.4rem 1.4rem;
+}
+
+.form-control {
+  background: #23201c !important;
+  border: none !important;
+  color: #fff !important;
+  border-radius: 20px !important;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: none !important;
+}
+
+.form-control:focus {
+  background: #23201c !important;
+  color: #fff !important;
+  border: 1px solid #00e1ff !important;
+  box-shadow: 0 0 0 2px #00e1ff44 !important;
+}
+
+.list-group-item {
+  background: #23201c !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 12px !important;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Utility classes for spacing and rounded corners */
+.rounded-pill, .btn, .form-control {
+  border-radius: 20px !important;
+}
+
+/* Header bar (black background) */
+.header-bar {
+  background: #000 !important;
+  color: #fff !important;
+  padding: 0.5rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* For the blue "View my saved only" button */
+.btn-info, .btn-info:focus, .btn-info:active {
+  background: #5d5fff !important;
+  color: #fff !important;
+  border: none !important;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 0.4rem 1.4rem;
+}
+
+/* --- Custom Top Nav Bar Styles --- */
+.top-navbar {
+  background: #23201c;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  height: 48px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  z-index: 100;
+}
+.top-navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-right: 32px;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.top-navbar .logo span {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+.top-navbar .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-right: 32px;
+}
+.top-navbar .nav-link {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+.top-navbar .nav-link.active,
+.top-navbar .nav-link:hover {
+  opacity: 1;
+  background: #2e2822;
+}
+.top-navbar .nav-link .fa {
+  margin-right: 6px;
+  font-size: 1.1em;
+}
+.top-navbar .search-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+}
+.top-navbar .search-input {
+  background: #191715;
+  border: none;
+  border-radius: 16px;
+  padding: 4px 12px;
+  color: #fff;
+  width: 180px;
+  font-size: 1rem;
+  margin-right: 8px;
+}
+.top-navbar .search-input:focus {
+  outline: none;
+  background: #23201c;
+}
+.top-navbar .search-icon {
+  color: #aaa;
+  font-size: 1.1em;
+}
+.top-navbar .btn-request {
+  background: #42ffac;
+  color: #23201c;
+  border: none;
+  border-radius: 16px;
+  padding: 4px 18px;
+  font-weight: 700;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.top-navbar .btn-request:hover {
+  background: #2fcf8b;
+}
+.top-navbar .btn-signin {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #3a3a3a;
+  border-radius: 16px;
+  padding: 4px 14px;
+  font-weight: 700;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.top-navbar .btn-signin:hover {
+  background: #2e2822;
+  color: #42ffac;
+}
+.top-navbar .settings-icon {
+  color: #aaa;
+  font-size: 1.2em;
+  margin-left: 4px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.top-navbar .settings-icon:hover {
+  color: #fff;
+}

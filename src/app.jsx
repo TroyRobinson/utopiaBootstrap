@@ -7,6 +7,41 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import ListGroup from 'react-bootstrap/ListGroup';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../public/custom-bootstrap.css';
+
+// FontAwesome CDN for icons
+const FA_LINK = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css";
+if (!document.getElementById('fa-cdn')) {
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = FA_LINK;
+  link.id = 'fa-cdn';
+  document.head.appendChild(link);
+}
+
+function TopNavBar() {
+  return (
+    <nav className="top-navbar">
+      <div className="logo">
+        Neighborhood<br />Explorer <span>A JVS Product</span>
+      </div>
+      <div className="nav-links">
+        <a className="nav-link active" href="#"><i className="fa fa-home"></i>Home</a>
+        <a className="nav-link" href="#"><i className="fa fa-chart-bar"></i>Outcome Stats</a>
+        <a className="nav-link" href="#"><i className="fa fa-sitemap"></i>Organizations</a>
+        <a className="nav-link" href="#"><i className="fa fa-flask"></i>Research</a>
+        <a className="nav-link" href="#"><i className="fa fa-database"></i>Sources</a>
+      </div>
+      <div className="search-container">
+        <input className="search-input" type="text" placeholder="Search..." />
+        <i className="fa fa-search search-icon"></i>
+      </div>
+      <button className="btn-request">Request</button>
+      <button className="btn-signin">Sign In</button>
+      <i className="fa fa-cog settings-icon"></i>
+    </nav>
+  );
+}
 
 export var App = () => {
   const [todos, setTodos] = useState([]);
@@ -21,7 +56,10 @@ export var App = () => {
   };
 
   return (
-    <Container className="d-flex flex-column align-items-center justify-content-center min-vh-100 bg-white">
+    <>
+      <TopNavBar />
+      <Container className="d-flex flex-column align-items-center justify-content-center min-vh-100 bg-white" style={{paddingTop: 60}}>
+
       <Row className="mb-4">
         <Col>
           <h2>Todo List</h2>
@@ -51,5 +89,6 @@ export var App = () => {
         </Col>
       </Row>
     </Container>
+    </>
   );
 };
